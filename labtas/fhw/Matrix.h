@@ -41,7 +41,7 @@ namespace mat_vec {
         void reshape(size_t rows, size_t cols);
 
         // Возвращает пару {rows, cols} -- количество строк и столбцов матрицы
-        std::pair<size_t, size_t> shape() const;
+        [[nodiscard]] std::pair<size_t, size_t> shape() const;
 
         // Возвращает элемент на позиции [row, col]
         double get(size_t row, size_t col) const;

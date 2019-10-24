@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/CppHW/labtas/fhw/Base.h
+
+/Users/admin/CppHW/labtas/fhw/Matrix.cpp
+Matrix.h
+/Users/admin/CppHW/labtas/fhw/Matrix.h
+Base.h
+/Users/admin/CppHW/labtas/fhw/Base.h
+Vector.h
+/Users/admin/CppHW/labtas/fhw/Vector.h
+tuple
+-
+
+/Users/admin/CppHW/labtas/fhw/Matrix.h
+Base.h
+/Users/admin/CppHW/labtas/fhw/Base.h
+tuple
+-
+
+/Users/admin/CppHW/labtas/fhw/Vector.h
+Base.h
+/Users/admin/CppHW/labtas/fhw/Base.h
+tuple
+-
+

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/admin/c++/labtas/fhw/Matrix.cpp" "/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/Matrix.cpp.o"
-  "/Users/admin/c++/labtas/fhw/Vector.cpp" "/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/Vector.cpp.o"
-  "/Users/admin/c++/labtas/fhw/main.cpp" "/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/main.cpp.o"
+  "/Users/admin/CppHW/labtas/fhw/Matrix.cpp" "/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/Matrix.cpp.o"
+  "/Users/admin/CppHW/labtas/fhw/Vector.cpp" "/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/Vector.cpp.o"
+  "/Users/admin/CppHW/labtas/fhw/main.cpp" "/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -183,9 +183,7 @@ Vector Vector::operator*(double k) const {
     Vector res(vector_size);
 
     for (int i = 0; i < vector_size; ++i) {
-
         res.vector[i] = this -> vector[i] * k;
-
     }
 
     return (res);
@@ -222,40 +220,47 @@ Vector& Vector::operator/=(double k) {
 }
 
 // Умножение вектора на матрицу
-//
-//Vector Vector::operator*(const mat_vec::Matrix &mat) const {
-//
-//    Vector res(vector_size);
-//
-//    size_t n,m;
-//
-//    for (int i = 0; i < vector_size; i++)
-//    {
-//        double temp = 0;
-//        for (int j=0;j<m;j++)
-//        {
-//            temp += mat[i*m+j]*vector[j];
-//        }
-//        res[i] = temp;
-//    }
-//
-//    return (res);
-//}
-//
-//Vector& Vector::operator*=(const mat_vec::Matrix &mat) {
-//
-//    for (int i = 0; i < vector_size; i++)
-//    {
-//        double temp = 0;
-//        for (int j=0;j<m;j++)
-//        {
-//            temp += mat[i*m+j]*vector[j];
-//        }
-//        vector[i] = temp;
-//    }
-//
-//    return  * this;
-//}
+
+Vector Vector::operator*(const mat_vec::Matrix &mat) const {
+
+    Vector res(vector_size);
+
+    std::pair<size_t, size_t> p = mat.shape();
+    size_t n = p.first;
+    size_t m = p.second;
+
+    for (int i = 0; i < n; i++)
+    {
+        res[i] = 0;
+        for (int j=0;j<m;j++)
+        {
+            res[i] += mat.get(i,j) * vector[j];
+        }
+    }
+
+    return (res);
+}
+
+Vector& Vector::operator*=(const mat_vec::Matrix &mat) {
+    Vector res(vector_size);
+
+    std::pair<size_t, size_t> p = mat.shape();
+    size_t n = p.first;
+    size_t m = p.second;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j=0;j<m;j++)
+        {
+            res[i] += mat.get(i,j)*vector[j];
+        }
+    }
+
+    for (int i = 0; i < res.size(); ++i) {
+        vector[i] = res[i];
+    }
+    return  * this;
+}
 
 
 // Поэлементное сравнение

@@ -1,5 +1,6 @@
 #include "Matrix.h"
 #include "Base.h"
+#include "Vector.h"
 #include <tuple>
 
 using namespace mat_vec;
@@ -155,7 +156,6 @@ void Matrix::reshape(size_t rows, size_t cols) {
 }
 
 std::pair<size_t, size_t> Matrix::shape() const {
-
     return {this -> n, this -> m};
 }
 
@@ -211,9 +211,9 @@ Matrix& Matrix::operator-=(const mat_vec::Matrix &rhs) {
 }
 
 Matrix Matrix::operator*(const mat_vec::Matrix &rhs) const {
-    Matrix mtrx (this -> n,rhs.m);
+    Matrix mtrx ( n,rhs.m);
 
-    for (int i = 0; i < this -> n; ++i) {
+    for (int i = 0; i < n; ++i) {
         for (int j = 0; j < rhs.m; ++j) {
             for (int k = 0; k < this -> m; ++k) {
                 mtrx.matrica[i][j]+= matrica[i][k] * rhs.matrica[k][j];
@@ -225,7 +225,42 @@ Matrix Matrix::operator*(const mat_vec::Matrix &rhs) const {
     return (mtrx);
 }
 
+Matrix& Matrix::operator*=(const mat_vec::Matrix &rhs) {
 
+    Matrix mtrx(n,m);
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            mtrx.matrica[i][j] = matrica[i][j];
+        }
+    }
+
+    for (int i = 0; i < n; ++i) {
+        delete [](matrica[i]);
+    }
+    delete[](matrica);
+
+    matrica = new double * [n];
+    for (int i = 0; i < n; ++i) {
+        matrica[i] = new double [rhs.m];
+    }
+
+    for (int i = 0; i < this -> n; ++i) {
+        for (int j = 0; j < rhs.m; ++j) {
+            matrica[i][j] = 0;
+        }
+    }
+
+    for (int i = 0; i < this -> n; ++i) {
+        for (int j = 0; j < rhs.m; ++j) {
+            for (int k = 0; k < m; ++k) {
+                matrica[i][j]+= mtrx.matrica[i][k] * rhs.matrica[k][j];
+            }
+        }
+    }
+    m = rhs.m;
+
+    return * this;
+}
 
 Matrix Matrix::operator*(double k) const {
 
@@ -275,6 +310,34 @@ Matrix& Matrix::operator/=(double k) {
     return * this;
 }
 
+double Matrix::det() const {
+
+    double det = 1;
+    const double EPS = 1E-9;
+    
+    for (int i=0; i<n; ++i) {
+        int k = i;
+        for (int j=i+1; j<n; ++j)
+            if (matrica[j][i] > matrica[k][i])
+                k = j;
+        if (matrica[k][i]) < EPS) {
+            det = 0;
+            break;
+        }
+        swap (a[i], a[k]);
+        if (i != k)
+            det = -det;
+        det *= a[i][i];
+        for (int j=i+1; j<n; ++j)
+            a[i][j] /= a[i][i];
+        for (int j=0; j<n; ++j)
+            if (j != i && abs (a[j][i]) > EPS)
+                for (int k=i+1; k<n; ++k)
+                    a[j][k] -= a[i][k] * a[j][i];
+    }
+
+    return(det);
+}
 bool Matrix::operator==(const mat_vec::Matrix &rhs) const {
 
     bool compare = true;

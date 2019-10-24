@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/c++/labtas/fhw
+CMAKE_SOURCE_DIR = /Users/admin/CppHW/labtas/fhw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/c++/labtas/fhw/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/admin/CppHW/labtas/fhw/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fhw.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/fhw.dir/flags.make
 
 CMakeFiles/fhw.dir/main.cpp.o: CMakeFiles/fhw.dir/flags.make
 CMakeFiles/fhw.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fhw.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fhw.dir/main.cpp.o -c /Users/admin/c++/labtas/fhw/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fhw.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fhw.dir/main.cpp.o -c /Users/admin/CppHW/labtas/fhw/main.cpp
 
 CMakeFiles/fhw.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fhw.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/c++/labtas/fhw/main.cpp > CMakeFiles/fhw.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/CppHW/labtas/fhw/main.cpp > CMakeFiles/fhw.dir/main.cpp.i
 
 CMakeFiles/fhw.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fhw.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/c++/labtas/fhw/main.cpp -o CMakeFiles/fhw.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/CppHW/labtas/fhw/main.cpp -o CMakeFiles/fhw.dir/main.cpp.s
 
 CMakeFiles/fhw.dir/Matrix.cpp.o: CMakeFiles/fhw.dir/flags.make
 CMakeFiles/fhw.dir/Matrix.cpp.o: ../Matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fhw.dir/Matrix.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fhw.dir/Matrix.cpp.o -c /Users/admin/c++/labtas/fhw/Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fhw.dir/Matrix.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fhw.dir/Matrix.cpp.o -c /Users/admin/CppHW/labtas/fhw/Matrix.cpp
 
 CMakeFiles/fhw.dir/Matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fhw.dir/Matrix.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/c++/labtas/fhw/Matrix.cpp > CMakeFiles/fhw.dir/Matrix.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/CppHW/labtas/fhw/Matrix.cpp > CMakeFiles/fhw.dir/Matrix.cpp.i
 
 CMakeFiles/fhw.dir/Matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fhw.dir/Matrix.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/c++/labtas/fhw/Matrix.cpp -o CMakeFiles/fhw.dir/Matrix.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/CppHW/labtas/fhw/Matrix.cpp -o CMakeFiles/fhw.dir/Matrix.cpp.s
 
 CMakeFiles/fhw.dir/Vector.cpp.o: CMakeFiles/fhw.dir/flags.make
 CMakeFiles/fhw.dir/Vector.cpp.o: ../Vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fhw.dir/Vector.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fhw.dir/Vector.cpp.o -c /Users/admin/c++/labtas/fhw/Vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fhw.dir/Vector.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fhw.dir/Vector.cpp.o -c /Users/admin/CppHW/labtas/fhw/Vector.cpp
 
 CMakeFiles/fhw.dir/Vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fhw.dir/Vector.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/c++/labtas/fhw/Vector.cpp > CMakeFiles/fhw.dir/Vector.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/CppHW/labtas/fhw/Vector.cpp > CMakeFiles/fhw.dir/Vector.cpp.i
 
 CMakeFiles/fhw.dir/Vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fhw.dir/Vector.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/c++/labtas/fhw/Vector.cpp -o CMakeFiles/fhw.dir/Vector.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/CppHW/labtas/fhw/Vector.cpp -o CMakeFiles/fhw.dir/Vector.cpp.s
 
 # Object files for target fhw
 fhw_OBJECTS = \
@@ -110,7 +110,7 @@ fhw: CMakeFiles/fhw.dir/Matrix.cpp.o
 fhw: CMakeFiles/fhw.dir/Vector.cpp.o
 fhw: CMakeFiles/fhw.dir/build.make
 fhw: CMakeFiles/fhw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable fhw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable fhw"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fhw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/fhw.dir/clean:
 .PHONY : CMakeFiles/fhw.dir/clean
 
 CMakeFiles/fhw.dir/depend:
-	cd /Users/admin/c++/labtas/fhw/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/c++/labtas/fhw /Users/admin/c++/labtas/fhw /Users/admin/c++/labtas/fhw/cmake-build-debug /Users/admin/c++/labtas/fhw/cmake-build-debug /Users/admin/c++/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/admin/CppHW/labtas/fhw/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/CppHW/labtas/fhw /Users/admin/CppHW/labtas/fhw /Users/admin/CppHW/labtas/fhw/cmake-build-debug /Users/admin/CppHW/labtas/fhw/cmake-build-debug /Users/admin/CppHW/labtas/fhw/cmake-build-debug/CMakeFiles/fhw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fhw.dir/depend
 
