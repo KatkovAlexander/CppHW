@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/CppHW/cats/Date/date.h
+
+/Users/admin/CppHW/cats/Date/main.cpp
+iostream
+-
+cstdio
+-
+cstdlib
+-
+vector
+-
+algorithm
+-
+cmath
+-
+stack
+-
+functional
+-
+set
+-
+queue
+-
+string
+-
+map
+-
+iomanip
+-
+sstream
+-
+cassert
+-
+date.h
+/Users/admin/CppHW/cats/Date/date.h
+

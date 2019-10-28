@@ -76,6 +76,8 @@ namespace mat_vec {
         double det() const;
 
         // Обратная матрица
+        double minor(int k, int d) const;
+        Matrix preInv()const;
         Matrix inv() const;
 
         // УМножение матрицы на вектор

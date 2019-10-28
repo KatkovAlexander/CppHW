@@ -2,6 +2,7 @@
 #include "Base.h"
 #include "Vector.h"
 #include <tuple>
+#include <cmath>
 
 using namespace mat_vec;
 
@@ -184,7 +185,7 @@ Matrix& Matrix::operator+=(const mat_vec::Matrix &rhs) {
         }
     }
 
-    return * this;
+    return *this;
 }
 
 Matrix Matrix::operator-(const mat_vec::Matrix &rhs) const {
@@ -310,34 +311,83 @@ Matrix& Matrix::operator/=(double k) {
     return * this;
 }
 
-double Matrix::det() const {
-
-    double det = 1;
-    const double EPS = 1E-9;
+// Определитель 
+double mat_vec::Matrix::det() const {
+    Matrix mtrx(*this);
     
-    for (int i=0; i<n; ++i) {
-        int k = i;
-        for (int j=i+1; j<n; ++j)
-            if (matrica[j][i] > matrica[k][i])
+    int k;
+    double det = 1.0;
+    int n = mtrx.n;
+    
+    for (int i = 0; i < n; i++) {
+        k = i;
+        for (int j = i + 1; j < n; j++)
+            if (std::abs(mtrx.matrica[j][i]) > std::abs(mtrx.matrica[k][i]))
                 k = j;
-        if (matrica[k][i]) < EPS) {
-            det = 0;
-            break;
+
+
+        for (int t = 0; t < n; t++) {
+            double tmp = mtrx.matrica[i][t];
+            mtrx.matrica[i][t] = mtrx.matrica[k][t];
+            mtrx.matrica[k][t] = tmp;
         }
-        swap (a[i], a[k]);
+
         if (i != k)
             det = -det;
-        det *= a[i][i];
-        for (int j=i+1; j<n; ++j)
-            a[i][j] /= a[i][i];
-        for (int j=0; j<n; ++j)
-            if (j != i && abs (a[j][i]) > EPS)
-                for (int k=i+1; k<n; ++k)
-                    a[j][k] -= a[i][k] * a[j][i];
-    }
 
-    return(det);
+        det *= mtrx.matrica[i][i];
+        for (int j = i + 1; j < n; j++)
+            mtrx.matrica[i][j] /= mtrx.matrica[i][i];
+
+        for (int j = 0; j < n; j++)
+            if (j != i && std::abs(mtrx.matrica[j][i]) > 0.000000000001)
+                for (int d = i + 1; d < n; d++)
+                    mtrx.matrica[j][d] -= mtrx.matrica[i][d] * mtrx.matrica[j][i];
+
+
+    }
+    return det;
 }
+
+// Обратная матрица
+double mat_vec::Matrix::minor(int k, int d) const {
+
+    Matrix mtrx(this->m - 1);
+    int ind1 = 0, ind2 = 0;
+    for (int i = 0; i < this->n; i++)
+        for (int j = 0; j < this->m; j++)
+            if (k != i && d != j) {
+                mtrx.matrica[ind1][ind2] = this->matrica[i][j];
+                ind2++;
+                if (ind2 == this->m - 1) {
+                    ind2 = 0;
+                    ind1++;
+                }
+            }
+
+    double MinorKof = (k + d) % 2 == 0 ? 1.0 : -1.0;
+    double MinorDet = mtrx.det();
+    return MinorKof * MinorDet;
+}
+
+mat_vec::Matrix mat_vec::Matrix::preInv() const {
+    Matrix mtrx(*this);
+    for (size_t i = 0; i < mtrx.n; i++)
+        for (size_t j = 0; j < mtrx.m; j++)
+            mtrx.matrica[i][j] = this->minor(i, j);
+
+    return mtrx;
+}
+
+mat_vec::Matrix mat_vec::Matrix::inv() const {
+    Matrix mtrx(*this);
+    double detA = mtrx.det();
+    mtrx = mtrx.preInv();
+    mtrx = mtrx.transposed();
+    mtrx /= detA;
+    return mtrx;
+}
+
 bool Matrix::operator==(const mat_vec::Matrix &rhs) const {
 
     bool compare = true;

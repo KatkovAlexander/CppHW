@@ -1,0 +1,3 @@
+/Users/admin/CppHW/cats/FiniteField(Easy)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/admin/CppHW/cats/FiniteField(Easy)/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/admin/CppHW/cats/FiniteField(Easy)/cmake-build-debug/CMakeFiles/FiniteField_Easy_.dir
