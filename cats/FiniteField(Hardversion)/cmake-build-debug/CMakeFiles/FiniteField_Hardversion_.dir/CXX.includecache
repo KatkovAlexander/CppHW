@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/CppHW/cats/FiniteField(Hardversion)/main.cpp
+cassert
+-
+iostream
+-
+vector
+-
+limits
+-
+functional
+-
+num.h
+/Users/admin/CppHW/cats/FiniteField(Hardversion)/num.h
+num.cpp
+/Users/admin/CppHW/cats/FiniteField(Hardversion)/num.cpp
+
+/Users/admin/CppHW/cats/FiniteField(Hardversion)/num.cpp
+num.h
+/Users/admin/CppHW/cats/FiniteField(Hardversion)/num.h
+
+/Users/admin/CppHW/cats/FiniteField(Hardversion)/num.h
+

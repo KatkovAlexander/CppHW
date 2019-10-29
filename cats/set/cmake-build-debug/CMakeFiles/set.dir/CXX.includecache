@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/CppHW/cats/set/main.cpp
+iostream
+-
+cstdio
+-
+cstdlib
+-
+vector
+-
+algorithm
+-
+cmath
+-
+stack
+-
+functional
+-
+set
+-
+queue
+-
+string
+-
+map
+-
+iomanip
+-
+sstream
+-
+cassert
+-
+set.h
+/Users/admin/CppHW/cats/set/set.h
+
+/Users/admin/CppHW/cats/set/set.h
+vector
+-
+

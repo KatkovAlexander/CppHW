@@ -4,7 +4,7 @@
 #include <functional>
 
 #include "num.h"
-#include "num.cpp"
+
 
 using namespace std;
 
